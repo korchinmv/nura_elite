@@ -1,0 +1,19 @@
+//Базовые стили
+@import "./base/vars";
+@import "mixins";
+@import "./base/fonts";
+@import "./base/settings";
+@import "./base/animations";
+@import "./base/patterns";
+
+//Элементы страницы
+@import "./elements/buttons";
+@import "./elements/titles";
+@import "./elements/blocks";
+@import "./elements/cards";
+@import "./elements/forms";
+
+//Блоки страницы
+@import "../modules/_header/_header";
+
+@import "../modules/_footer/_footer";

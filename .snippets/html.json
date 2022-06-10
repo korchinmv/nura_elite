@@ -1,0 +1,185 @@
+{
+	"style background-image": {
+		"prefix": "s-sbi",
+		"body": [
+			"style=\"background-image: url('images/$1')\""
+      "$2"
+		],
+		"description": "Snippet for fast added style in html"
+	}
+
+  "burger": {
+		"scope": "html",
+		"prefix": "s-burger",
+		"body": [
+			"<button class=\"burger\" aria-label=\"Открыть меню\" aria-expanded=\"false\"  data-burger>",
+			"  <span class=\"burger__line\"></span>",
+			"</button>"
+		],
+		"description": "Snippet for burger btn"
+	},
+	"checkbox": {
+		"scope": "html",
+		"prefix": "s-checkbox",
+		"body": [
+			"<label class=\"custom-checkbox\">",
+			"  <input class=\"custom-checkbox__field checkbox-hidden\" type=\"checkbox\">",
+			"  <span class=\"custom-checkbox__content\">$1</span>",
+			"</label>"
+		],
+		"description": "Snippet for custom checkbox"
+	},
+	"navigation": {
+		"scope": "html",
+		"prefix": "s-nav",
+		"body": [
+			"<nav class=\"header__nav\" title=\"$1\">",
+			"  <a class=\"logo\" href=\"#\">",
+			"    <img class=\"logo__img\" src=\"images/logo.png\" alt=\"\" width=\"\" height=\"\">",
+			"  </a>",
+			"",
+			"  <ul class=\"menu\">",
+			"    <li class=\"menu__item\"><a class=\"menu__link\" href=\"#\"></a></li>",
+			"    <li class=\"menu__item\"><a class=\"menu__link\" href=\"#\"></a></li>",
+			"    <li class=\"menu__item\"><a class=\"menu__link\" href=\"#\"></a></li>",
+			"  </ul>",
+			"</nav>"
+		],
+		"description": "Snippet for navigation"
+	},
+	"svg sprite": {
+		"prefix": "s-sprite",
+		"body": [
+			"<svg>"
+			"  <use xlink:href=\"images/sprite.svg#icon-$1\"></use>"
+	 		"</svg>"
+		],
+	}
+
+	"sr-only": {
+		"prefix": "s-sronly",
+		"body": [
+			"<span class=\"sr-only\">$1</span>"
+      "$2"
+		],
+	}
+
+	"checkbox-hidden": {
+		"prefix": "s-chidden",
+		"body": [
+			"checkbox-hidden"
+		],
+	}
+
+	"social-list": {
+		"prefix": "s-social",
+		"body": [
+			"<ul class=\"social-list\">",
+			"",
+			"   <li class=\"social-list__item\">",
+		  "	     <a class=\"social-list__link\" href=\"#\" aria-label=\"Наша страничка в Фейсбуке\">",
+			"         <svg>",
+			"            <use xlink:href=\"images/sprite.svg#icon-$1\"></use>",
+			"         </svg>",
+			"      </a>",
+			"   </li>",
+			"",
+			"   <li class=\"social-list__item\">",
+		  "	     <a class=\"social-list__link\" href=\"#\" aria-label=\"Наша страничка в Вконтакте\">",
+			"         <svg>",
+			"             <use xlink:href=\"images/sprite.svg#icon-$1\"></use>",
+			"         </svg>",
+			"      </a>",
+			"   </li>",
+			"",
+			"   <li class=\"social-list__item\">",
+		  "    	 <a class=\"social-list__link\" href=\"#\" aria-label=\"Наша страничка в Твиттере\">",
+			"         <svg>",
+			"             <use xlink:href=\"images/sprite.svg#icon-$1\"></use>",
+			"         </svg>",
+			"      </a>",
+			"   </li>",
+			"",
+			"</ul>",
+		],
+		"description": "Snippet for social links"
+	},
+	"basicform": {
+		"prefix": "s-form",
+		"body": [
+			"<form action=\"#\" class=\"form\">",
+			"  <label class=\"form__label\">",
+			"    <input type=\"text\" name=\"Имя\" class=\"input-reset form__input\" placeholder=\"Имя\">",
+			"  </label>",
+			"  <button class=\"btn-reset form__btn\">Отправить</button>",
+			"</form>"
+		],
+		"description": "Snippet for basic form"
+	},
+	"basicswiper": {
+		"prefix": "s-swiper",
+		"body": [
+			"<div class=\"swiper $1\">",
+			"  <div class=\"swiper-wrapper\">",
+			"     <div class=\"swiper-slide\">",
+			"     </div>",
+			"  </div>",
+			"</div>"
+		],
+		"description": "Snippet for basic swiper structure"
+	},
+	"graph modal Structure": {
+		"prefix": "graph-modal",
+		"body": [
+			"<div class=\"graph-modal\">",
+			"  <div class=\"graph-modal__container\" role=\"dialog\" aria-modal=\"true\" data-graph-target=\"$1\">",
+			"    <button class=\"btn-reset js-modal-close graph-modal__close\" aria-label=\"Закрыть модальное окно\"></button>",
+			"    <div class=\"graph-modal__content\">$2</div>",
+			"  </div>",
+			"</div>"
+		],
+		"description": "Snippet for graph-modal basic structure"
+	},
+	"tooltip": {
+		"prefix": "s-tooltip",
+		"body": [
+			"<span class=\"tooltip\">",
+			"  <button class=\"tooltip__btn\" aria-describedby=\"$1\">$2</button>",
+			"  <span class=\"tooltip__txt\" role=\"tooltip\" id=\"$1\">",
+			"    <span class=\"visually-hidden\">Тултип: </span>",
+			"    $3",
+			"  </span>",
+			"</span>"
+		],
+		"description": "Snippet for tooltip"
+	},
+	"tabs html sctructure": {
+		"prefix": "s-tabs",
+		"body": [
+			"<div class=\"tabs\" data-tabs=\"$1\">",
+			"  <ul class=\"tabs__nav\">",
+			"    <li class=\"tabs__nav-item\"><button class=\"tabs__nav-btn\" type=\"button\">$2</button></li>",
+			"    <li class=\"tabs__nav-item\"><button class=\"tabs__nav-btn\" type=\"button\">$3</button></li>",
+			"    <li class=\"tabs__nav-item\"><button class=\"tabs__nav-btn\" type=\"button\">$4</button></li>",
+			"  </ul>",
+			"  <div class=\"tabs__content\">",
+			"    <div class=\"tabs__panel\">$5</div>",
+			"    <div class=\"tabs__panel\">$6</div>",
+			"    <div class=\"tabs__panel\">$7</div>",
+			"  </div>",
+			"</div>"
+		],
+		"description": "Snippet for basic tabs structure"
+	},
+	"picture": {
+		"prefix": "s-pic",
+		"body": [
+			"<picture class=\"$1\">",
+			"    <source srcset=\"images/$2.webp\" type=\"image/webp\">",
+			"    <source srcset=\"images/$3avif\" type=\"image/avif\">",
+			"    <img class=\"$4\" loading=\"lazy\" src=\"images/$4\" width=\"$5\" height=\"$6\" alt=\"$7\">",
+			"</picture>"
+		],
+		"description": "Snippet for webp and avif"
+	}
+}

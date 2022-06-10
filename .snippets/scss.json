@@ -1,0 +1,160 @@
+{
+	"fancybox error": {
+		"prefix": "fb",
+		"body": [
+			"@function max(${1:$}numbers...) {"
+      "  @return m#{a}x(#{${1:$}numbers});"
+      "}"
+      "@function min(${1:$}numbers...) {"
+      "  @return m#{i}n(#{${1:$}numbers});"
+      "}"
+		],
+		"description": "fancybox error fix"
+	}
+
+  "flexbox center": {
+		"prefix": "fc",
+		"body": [
+			"display: flex;"
+  	    "justify-content: center;"
+   	   	"align-items: center;"
+   		  "$1"
+		],
+	}
+
+  "absolute center": {
+		"prefix": "ac",
+		"body": [
+			"position: absolute;"
+   	   "top: 50%;"
+   	   "left: 50%;"
+   	   "transform: translate(-50%, -50%);"
+    	  "$1"
+		],
+	}
+
+	"flex space-between": {
+		"prefix": "sb",
+		"body": [
+			"display: flex;"
+				"justify-content: space-between;"
+				"$1"
+   	   "$2"
+		],
+	}
+
+	"container": {
+		"prefix": "cnt",
+		"body": [
+			"max-width: $1px;"
+				"padding: 0 $2px;"
+				"margin: 0 auto;"
+     	 "$3"
+		],
+	}
+
+	"property text": {
+		"prefix": "txt",
+		"body": [
+			"font-family: $1;"
+				"font-weight: $2;"
+				"font-size: $3px;"
+				"line-height: $4;"
+				"text-transform: uppercase;"
+				"color: $5;"
+      	"$6"
+		],
+	}
+
+	"line-clamp": {
+		"prefix": "lc",
+		"body": [
+			"@include line-clamp($1);"
+     		"$2"
+		],
+	}
+
+	"background": {
+		"prefix": "bgd",
+		"body": [
+			"background-image: url(..images/$1);"
+				"background-repeat: no-repeat;"
+				"background-position: top center;"
+				"background-size: cover;"
+     	 "$2"
+		],
+	}
+
+	"margin auto": {
+		"prefix": "ma",
+		"body": [
+			"margin-left: auto;"
+				"margin-right: auto;"
+     	 	"$1"
+		],
+	}
+
+	"Margin Bottom not last-child": {
+		"scope": "scss",
+		"prefix": "mbl",
+		"body": [
+			"&:not(:last-child) {margin-bottom: $1px;}"
+		],
+		"description": "Добавляет нижний отступ исключая последний объект"
+	},
+	"Margin Right not last-child": {
+		"scope": "scss",
+		"prefix": "mrl",
+		"body": [
+			"&:not(:last-child) {margin-right: $1px;}"
+		],
+		"description": "Добавляет правый отступ исключая последний объект"
+	},
+	"media desktop": {
+		"scope": "scss",
+		"prefix": "mqd",
+		"body": [
+			"@include mq('desktop$1', max) {"
+			""
+			"}"
+		],
+		"description": "Инклюд медиа-запроса десктоп"
+	},
+	"media tablet": {
+		"scope": "scss",
+		"prefix": "mqt",
+		"body": [
+			"@include mq('tablet$1', max) {"
+			""
+		"}"
+		],
+		"description": "Инклюд медиа-запроса десктоп"
+	},
+	"media phone": {
+		"scope": "scss",
+		"prefix": "mqp",
+		"body": [
+			"@include mq('phone$1', max) {"
+				""
+		"}"
+		],
+		"description": "Инклюд медиа-запроса десктоп"
+	},
+	"max-width": {
+		"scope": "scss",
+		"prefix": "mw",
+		"body": [
+			"max-width: $1px;"
+			"width: 100%;"
+		],
+		"description": "Инклюд максимальной ширины"
+	},
+	"transition": {
+		"scope": "scss",
+		"prefix": "trans",
+		"body": [
+			"transition: all 0.3s ease 0s"
+		],
+		"description": "Инклюд трансишена с дилеем"
+	},
+}

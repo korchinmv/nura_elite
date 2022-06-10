@@ -1,0 +1,74 @@
+html,
+body {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	font-size: 16px;
+	line-height: 1.2;
+	color: #000;
+}
+
+// отключаем скролл
+.lock {
+	overflow: hidden;
+	touch-action: none;
+}
+
+.page {
+	font-family: var(--font-family, sans-serif);
+	scroll-behavior: smooth;
+	-webkit-text-size-adjust: 100%;
+}
+
+.page__body {
+	margin: 0;
+	min-width: 320px;
+	min-height: 100%;
+}
+
+.main {
+	flex-grow: 1;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: var(--container-width);
+	padding: 0 var(--container-offset);
+}
+
+.logo {
+	&__img {
+		object-fit: contain;
+	}
+}
+
+.sr-only {
+	border: 0;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	padding: 0;
+	position: absolute;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 1px;
+}
+
+.checkbox-hidden,
+.radio-hidden {
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+	position: absolute;
+	height: 1px;
+	width: 1px;
+}
