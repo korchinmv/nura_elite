@@ -1,2 +1,8 @@
-import './_functions';
-import './_components';
+import "./functions/burger";
+
+
+// import "./plugins/sliders";
+// import "./plugins/load-more";
+// import "./plugins/map";
+// import "./plugins/mask";
+// import "./plugins/smooth-scroll";

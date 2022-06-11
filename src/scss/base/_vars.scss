@@ -1,11 +1,15 @@
 :root {
 	// base
-	--font-family: "Open Sans", sans-serif;
-	--content-width: 1170px;
+	--content-width: 1180px;
 	--container-offset: 15px;
 	--container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+	--font-family: "FiraSans", sans-serif;
+	--font-size: 20px;
 
 	// colors
-	--light-color: #fff;
-	--black-color: #000;
+	--accent-color: #dba069;
+	--black-color: #333;
+	--block-color: rgba(132, 34, 49, 0.05);
+	--red-color: #842231;
+	--white-color: #fff;
 }

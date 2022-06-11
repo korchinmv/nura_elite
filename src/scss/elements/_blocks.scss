@@ -1,0 +1,47 @@
+.phone-link {
+	display: flex;
+	border: 1px solid var(--accent-color);
+	border-radius: 4px;
+	align-items: center;
+	padding: 10px 20px;
+
+	svg {
+		margin-right: 10px;
+	}
+}
+
+.whatsapp-link {
+	transition: color 0.3s ease 0s;
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: var(--accent-color);
+		}
+	}
+}
+
+.phone-link {
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+
+	&::before {
+		content: "";
+		position: absolute;
+		background-color: var(--accent-color);
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		transform: translateX(-100%);
+		transform-origin: 0 50%;
+		transition: transform 0.3s ease 0s;
+		z-index: -1;
+	}
+
+	@media (any-hover: hover) {
+		&:hover::before {
+			transform: translateX(0);
+		}
+	}
+}

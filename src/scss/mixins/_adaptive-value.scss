@@ -1,3 +1,18 @@
+@use "sass:math";
+
+// Минимальная ширина страницы
+$minWidth: 320;
+// Ширина полотна (макета)
+$maxWidth: 1920;
+// Ширина ограничивающего контейнера (0 = нет ограничения)
+$maxWidthContainer: 1780;
+// Общий отступ у контейнера
+// (30 = по 15px слева и справа, 0 = нет отступа)
+$containerPadding: 30;
+
+// Ширина срабатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding;
+
 // Адаптивное свойство (clamp)
 @mixin adaptiveValue($property, $startSize, $minSize, $widthFrom: $containerWidth, $widthTo: $minWidth, $keepSize: 0) {
 	// Для calc();
@@ -47,7 +62,3 @@
 		}
 	}
 }
-
-// Использование
-// @include adaptiveValue ("свойство", начальное значение, конечное значение);
-// @include adaptiveValue ("font-size", 36, 16);

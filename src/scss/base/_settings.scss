@@ -4,11 +4,14 @@ body {
 }
 
 body {
+	background-color: var(--white-color);
+	color: var(--black-color);
 	display: flex;
 	flex-direction: column;
-	font-size: 16px;
-	line-height: 1.2;
-	color: #000;
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	font-weight: 300;
+	line-height: 1.1;
 }
 
 // отключаем скролл
@@ -18,7 +21,6 @@ body {
 }
 
 .page {
-	font-family: var(--font-family, sans-serif);
 	scroll-behavior: smooth;
 	-webkit-text-size-adjust: 100%;
 }
@@ -61,14 +63,5 @@ body {
 	margin: -1px;
 	overflow: hidden;
 	white-space: nowrap;
-	width: 1px;
-}
-
-.checkbox-hidden,
-.radio-hidden {
-	clip: rect(0 0 0 0);
-	overflow: hidden;
-	position: absolute;
-	height: 1px;
 	width: 1px;
 }
