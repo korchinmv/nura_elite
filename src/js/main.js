@@ -1,4 +1,5 @@
 import "./functions/burger";
+import "./functions/header-fixed";
 
 
 // import "./plugins/sliders";

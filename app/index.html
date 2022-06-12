@@ -44,7 +44,11 @@
 		<div class="header__wrapper">
 
 			<a class="header__logo" href="index.html">
-				<img class="logo" src="images/logo.png" alt="Логотип компании">
+				<picture>
+					<source srcset="images/logo.webp" type="image/webp">
+					<source srcset="images/logo.avif" type="image/avif">
+					<img class="logo" loading="lazy" src="images/logo.png" alt="Логотип компании">
+				</picture>
 			</a>
 
 			<div class="header__inner">
@@ -93,7 +97,116 @@
 	</div>
 </header>
 		<main class="main">
+			<section class="hero" style="background-image: url('images/hero-bg.jpg')">
+	<div class="container">
+		<div class="hero__wrapper">
+			<div class="hero__inner">
+				<div class="hero__left">
 
+					<h1 class="hero__title">Элитный коттеджный городок в г. Нур-Султан</h1>
+
+					<a class="hero__btn btn" download href="#">Скачать презентацию</a>
+
+					<div class="hero__box">
+						<span class="hero__subtitle">36 коттеджей</span>
+
+						<ul class="hero__box-inner">
+							<li class="hero__item">
+								<span class="hero__num">3</span>
+								<ul class="hero__descr">
+									<li class="hero__name">коттеджа</li>
+									<li class="hero__name">368 м2</li>
+									<li class="hero__name">на 10 сотках</li>
+								</ul>
+							</li>
+
+							<li class="hero__item">
+								<span class="hero__num">33</span>
+								<ul class="hero__descr">
+									<li class="hero__name">коттеджа</li>
+									<li class="hero__name">179 м2</li>
+									<li class="hero__name">на 5 сотках</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="hero__right">
+					<ul class="hero__about">
+						<li class="hero__about-item"><span>Строительные работы</span> начались в сентября 2021 года.</li>
+						<li class="hero__about-item"><span>Срок сдачи</span> коттеджей - I квартал 2022 года</li>
+						<li class="hero__about-item"><span>Срок сдачи</span> всего коттеджного городка - II квартал 2022 года</li>
+					</ul>
+				</div>
+
+			</div>
+
+			<a class="hero__anchor anchor" href="#about">
+				<img class="anchor__img" src="images/svg/angles-down.svg" alt="Стрелка вниз">
+			</a>
+		</div>
+	</div>
+</section>
+			<section class="about-block">
+	<div class="container">
+		<div class="about-block__wrapper">
+			<div class="about-block__left">
+
+				<span class="about-block__title-shadow title-shadow"> О проекте</span>
+
+				<h2 class="about-block__title title-block__title">О проекте</h2>
+
+				<span class="about-block__descr">Элитный закрытый коттеджный городок в г. Нур-Султан состоящий из:</span>
+				<h3 class="about-block__subtitle subtitle-block">36 коттеджей:</h3>
+
+				<ul class="about-block__list">
+					<li class="about-block__item">- 368 м2 на 10 сотках </li>
+					<li class="about-block__item">- 179 м2 на 5 сотках</li>
+				</ul>
+
+				<h3 class="about-block__subtitle subtitle-block">О компании</h3>
+
+				<div class="about-block__text">
+					<p>“MM Group” Группа Строительных Компании – современная и динамично развивающаяся группа компаний,
+						оказывающая широкий спектр услуг в строительном бизнесе от проектирования до сдачи объектов под ключ. Свою
+						деятельность в строительном бизнесе начала осуществлять с 2013 года и прочно зарекомендовала себя надежной
+						Казахстанской строительной компанией не только на территории Республики Казахстан, но и за рубежом.
+						Учредителем и генеральным директором группы строительных компаний «MM Group» является - Мольдир Суюншали.
+					</p>
+				</div>
+
+				<h3 class="about-block__subtitle subtitle-block">Миссия</h3>
+
+				<div class="about-block__text">
+					<p>Приоритетом группы строительных компаний «MM Group» является профессиональный подход с применением
+						инновационных решении в строительстве воздвигаемых объектов, опытный коллектив, качественные материалы
+						и своевременность сдачи объектов с доступной возможностью приобретения не только жилья, но и других объектов
+						недвижимости.</p>
+				</div>
+			</div>
+
+			<div class="about-block__right">
+
+				<div class="about-block__img-box">
+					<picture>
+						<source srcset="images/about-block/company.webp" type="image/webp">
+						<source srcset="images/about-block/company.avif" type="image/avif">
+						<img class="about-block__img" loading="lazy" src="images/about-block/company.jpg" width="440" height="415"
+							alt="Строительная компания">
+					</picture>
+				</div>
+
+				<h3 class="about-block__subtitle subtitle-block">Цель</h3>
+
+				<div class="about-block__text">
+					<p>Укрепление статуса компании, которая способна обеспечить потребителя доступной и качественной недвижимостью
+						в срок. Развитие, надежность и качество!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 		</main>
 		<footer class="footer">
 	<ul class="footer__list">

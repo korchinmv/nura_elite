@@ -165,7 +165,10 @@ const clean = () => {
 };
 
 const scripts = () => {
-	return src('./src/js/main.js')
+	return src([
+		// 'node_modules/swiper/swiper-bundle.js',
+		'./src/js/main.js',
+	])
 		.pipe(webpackStream({
 			mode: 'development',
 			output: {
@@ -200,7 +203,7 @@ const scripts = () => {
 };
 
 const imgToApp = () => {
-	return src('./src/images/**/**.{jpg,jpeg,png}')
+	return src('./src/images/**/**.{jpg,jpeg,png,svg}')
 		.pipe(dest('./app/images'))
 };
 
@@ -227,7 +230,7 @@ const watchFiles = () => {
 	watch('./src/**/*.scss', styles);
 	watch('./src/html/*.html', htmlInclude);
 	watch('./src/modules/**/*.html', htmlInclude);
-	watch('./src/images/**/**.{jpg,jpeg,png}', imgToApp);
+	watch('./src/images/**/**.{jpg,jpeg,png,svg}', imgToApp);
 	watch('./src/images/**/**.{jpg,jpeg,png}', avifImages);
 	watch('./src/images/**/**.{jpg,jpeg,png}', webpImages);
 	watch('./src/images/**.svg', svgSprites);
@@ -261,7 +264,7 @@ const images = () => {
 };
 
 const stylesBuild = () => {
-	return src('./src/scss/pages/*.scss')
+	return src('./src/scss/*.scss')
 		.pipe(sass({
 			outputStyle: 'compressed'
 		}).on('error', notify.onError()))
@@ -303,10 +306,10 @@ const scriptsBuild = () => {
 		}))
 		.on('error', function (err) {
 			console.error('WEBPACK ERROR', err);
-			this.emit('end');
+			this.emit('end'); // Don't stop the rest of the task
 		})
 		.pipe(uglify().on("error", notify.onError()))
-		.pipe(dest('./app/js'));
+		.pipe(dest('./app/js'))
 };
 
 exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, resources, imgToApp, svgSprites), fontsStyle, stylesBuild, images, webpImages, avifImages);

@@ -1,0 +1,94 @@
+.about-block {
+	padding: 120px 0 50px;
+	overflow: hidden;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 -40px;
+	}
+
+	&__left {
+		max-width: 680px;
+		width: 100%;
+		margin-right: 15px;
+	}
+
+	&__title-shadow {
+		margin-top: -100px;
+	}
+
+	&__title {
+		margin-bottom: 60px;
+	}
+
+	&__descr {
+		display: block;
+		margin-bottom: 15px;
+	}
+
+	&__subtitle {
+		margin-bottom: 20px;
+	}
+
+	&__list {
+		margin-bottom: 60px;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 5px;
+		}
+	}
+
+	&__text {
+		margin-bottom: 60px;
+	}
+
+	&__right {
+		max-width: 440px;
+		width: 100%;
+	}
+
+	&__img {
+		color: var(--red-color);
+		box-shadow: 40px 40px;
+		margin-bottom: 145px;
+
+		z-index: 2;
+	}
+
+	&__img-box {
+		position: relative;
+
+		&:before {
+			content: "";
+			display: block;
+			background-image: url(../images/about-block/decor-dots.png);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: absolute;
+			top: 5px;
+			right: -85px;
+			width: 450px;
+			height: 515px;
+			z-index: -1;
+		}
+
+		&:after {
+			content: "";
+			display: block;
+			background-image: url(../images/about-block/decor-dots.png);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: absolute;
+			top: 119px;
+			right: -539px;
+			width: 450px;
+			height: 515px;
+			z-index: -1;
+		}
+	}
+}

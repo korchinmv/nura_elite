@@ -1,0 +1,21 @@
+.title-shadow {
+	font-size: 286px;
+	font-weight: 700;
+	line-height: 0.8;
+	color: rgba(#333, 0.05);
+	margin-right: -500px;
+	position: absolute;
+	z-index: -1;
+}
+
+.title-block {
+	color: var(--black-color);
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.subtitle-block {
+	font-weight: 700;
+	line-height: 1.2;
+}
