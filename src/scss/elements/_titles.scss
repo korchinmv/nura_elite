@@ -5,7 +5,32 @@
 	color: rgba(#333, 0.05);
 	margin-right: -500px;
 	position: absolute;
+	left: 0;
 	z-index: -1;
+
+	@include mq("desktop", max) {
+		font-size: 250px;
+	}
+
+	@include mq("desktop-s", max) {
+		font-size: 230px;
+	}
+
+	@include mq("tablet", max) {
+		font-size: 200px;
+	}
+
+	@include mq("tablet-s", max) {
+		font-size: 150px;
+	}
+
+	@include mq("phone", max) {
+		font-size: 100px;
+	}
+
+	@include mq("phone-s", max) {
+		font-size: 60px;
+	}
 }
 
 .title-block {

@@ -2,37 +2,87 @@
 	padding: 120px 0 50px;
 	overflow: hidden;
 
+	@include mq("tablet", max) {
+		padding: 70px 0 50px;
+	}
+
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
-		margin: 0 -40px;
+		position: relative;
+
+		@include mq("tablet", max) {
+			display: block;
+		}
 	}
 
 	&__left {
 		max-width: 680px;
 		width: 100%;
-		margin-right: 15px;
+		margin-right: 30px;
+
+		@include mq("tablet", max) {
+			margin-right: 0;
+			max-width: 100%;
+		}
 	}
 
 	&__title-shadow {
 		margin-top: -100px;
+
+		@include mq("tablet", max) {
+			margin-top: -65px;
+		}
+
+		@include mq("phone", max) {
+			margin-top: -35px;
+		}
+
+		@include mq("phone-s", max) {
+			margin-top: -25px;
+		}
 	}
 
 	&__title {
 		margin-bottom: 60px;
+
+		@include mq("tablet-s", max) {
+			margin-bottom: 40px;
+		}
+
+		@include mq("phone", max) {
+			margin-bottom: 30px;
+		}
 	}
 
 	&__descr {
 		display: block;
 		margin-bottom: 15px;
+
+		@include mq("phone", max) {
+			font-size: 16px;
+		}
 	}
 
 	&__subtitle {
 		margin-bottom: 20px;
+
+		@include mq("phone", max) {
+			margin-bottom: 15px;
+		}
 	}
 
 	&__list {
 		margin-bottom: 60px;
+
+		@include mq("tablet-s", max) {
+			margin-bottom: 40px;
+		}
+
+		@include mq("phone", max) {
+			font-size: 16px;
+			margin-bottom: 30px;
+		}
 	}
 
 	&__item {
@@ -43,23 +93,47 @@
 
 	&__text {
 		margin-bottom: 60px;
+
+		@include mq("tablet-s", max) {
+			margin-bottom: 40px;
+		}
+
+		@include mq("phone", max) {
+			font-size: 16px;
+			margin-bottom: 30px;
+		}
 	}
 
 	&__right {
 		max-width: 440px;
 		width: 100%;
+
+		@include mq("tablet", max) {
+			max-width: 100%;
+		}
 	}
 
 	&__img {
 		color: var(--red-color);
 		box-shadow: 40px 40px;
 		margin-bottom: 145px;
-
 		z-index: 2;
+
+		@include mq("phone-s", max) {
+			box-shadow: 25px 25px;
+			margin-bottom: 70px;
+		}
 	}
 
 	&__img-box {
 		position: relative;
+
+		@include mq("tablet", max) {
+			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 
 		&:before {
 			content: "";
@@ -74,6 +148,13 @@
 			width: 450px;
 			height: 515px;
 			z-index: -1;
+
+			@include mq("phone-s", max) {
+				width: 300px;
+				height: 300px;
+				right: -20px;
+				top: 30px;
+			}
 		}
 
 		&:after {
