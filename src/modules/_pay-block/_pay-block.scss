@@ -1,0 +1,46 @@
+.pay-block {
+	padding: 130px 0 60px;
+	position: relative;
+
+	@include mq("tablet", max) {
+		padding: 80px 0 50px;
+	}
+
+	@include mq("phone", max) {
+		padding: 60px 0 40px;
+	}
+
+	&__title-shadow {
+		margin-top: -100px;
+		left: 50%;
+		text-align: center;
+		transform: translateX(-50%);
+
+		@include mq("tablet", max) {
+			margin-top: -65px;
+		}
+
+		@include mq("tablet-s", max) {
+			font-size: 110px;
+		}
+
+		@include mq("phone", max) {
+			margin-top: -40px;
+			font-size: 80px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 80px;
+		text-align: center;
+
+		@include mq("tablet-s", max) {
+			margin-bottom: 40px;
+		}
+
+		@include mq("phone-s", max) {
+			margin-bottom: 30px;
+			line-height: 1;
+		}
+	}
+}

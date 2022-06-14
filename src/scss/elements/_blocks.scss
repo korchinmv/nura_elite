@@ -45,3 +45,47 @@
 		}
 	}
 }
+
+.pay {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	&__item {
+		flex: 0 0 205px;
+
+		&:not(:last-child) {
+			margin: 0 20px 20px 0;
+
+			@include mq("phone-s", max) {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__img {
+		object-fit: contain;
+		margin: 0 auto 10px auto;
+	}
+
+	&__name {
+		display: block;
+		font-weight: 700;
+		font-size: 17px;
+		text-align: center;
+	}
+
+	&__num {
+		display: block;
+		font-family: GothamPro;
+		font-size: 36px;
+		font-weight: 700;
+		text-align: center;
+		line-height: 0.7;
+		margin-bottom: 20px;
+
+		span {
+			font-size: 90px;
+		}
+	}
+}
