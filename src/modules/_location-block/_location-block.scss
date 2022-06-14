@@ -1,29 +1,39 @@
-.about-block {
-	padding: 120px 0 50px;
+.location-block {
+	padding: 95px 0 135px;
 	overflow: hidden;
 
 	@include mq("tablet", max) {
-		padding: 70px 0 50px;
+		padding: 70px 0 90px;
+	}
+
+	@include mq("phone", max) {
+		padding: 50px 0 70px;
 	}
 
 	&__wrapper {
+		position: relative;
 		display: flex;
 		justify-content: space-between;
-		position: relative;
 
 		@include mq("tablet", max) {
 			display: block;
 		}
 	}
 
-	&__left {
-		max-width: 680px;
+	&__content {
+		max-width: 480px;
 		width: 100%;
-		margin-right: 30px;
+		align-self: flex-end;
+		margin-right: 20px;
 
 		@include mq("tablet", max) {
 			margin-right: 0;
+			margin-bottom: 30px;
 			max-width: 100%;
+		}
+
+		@include mq("phone", max) {
+			margin-bottom: 20px;
 		}
 	}
 
@@ -44,7 +54,7 @@
 	}
 
 	&__title {
-		margin-bottom: 60px;
+		margin-bottom: 50px;
 
 		@include mq("tablet-s", max) {
 			margin-bottom: 40px;
@@ -52,84 +62,26 @@
 
 		@include mq("phone", max) {
 			margin-bottom: 30px;
-		}
-	}
-
-	&__descr {
-		display: block;
-		margin-bottom: 15px;
-
-		@include mq("phone", max) {
-			font-size: 16px;
-		}
-	}
-
-	&__subtitle {
-		margin-bottom: 20px;
-
-		@include mq("phone", max) {
-			margin-bottom: 15px;
-		}
-	}
-
-	&__list {
-		margin-bottom: 60px;
-
-		@include mq("tablet-s", max) {
-			margin-bottom: 40px;
-		}
-
-		@include mq("phone", max) {
-			font-size: 16px;
-			margin-bottom: 30px;
-		}
-	}
-
-	&__item {
-		&:not(:last-child) {
-			margin-bottom: 5px;
 		}
 	}
 
 	&__text {
-		margin-bottom: 60px;
-
-		@include mq("tablet-s", max) {
-			margin-bottom: 40px;
-		}
-
 		@include mq("phone", max) {
 			font-size: 16px;
-			margin-bottom: 30px;
 		}
-	}
 
-	&__right {
-		max-width: 440px;
-		width: 100%;
-
-		@include mq("tablet", max) {
-			max-width: 100%;
-		}
-	}
-
-	&__img {
-		color: var(--red-color);
-		box-shadow: 40px 40px;
-		margin-bottom: 145px;
-		z-index: 2;
-
-		@include mq("phone-s", max) {
-			box-shadow: 25px 25px;
-			margin-bottom: 70px;
+		p {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
 		}
 	}
 
 	&__img-box {
 		position: relative;
+		flex-shrink: 0;
 
 		@include mq("tablet", max) {
-			margin: 0 auto;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -143,7 +95,7 @@
 			background-repeat: no-repeat;
 			background-size: cover;
 			position: absolute;
-			top: 5px;
+			top: 18px;
 			right: -85px;
 			width: 450px;
 			height: 515px;
@@ -165,11 +117,24 @@
 			background-repeat: no-repeat;
 			background-size: cover;
 			position: absolute;
-			top: 119px;
+			top: 18px;
 			right: -539px;
 			width: 450px;
 			height: 515px;
 			z-index: -1;
+
+			@include mq("tablet", max) {
+				display: none;
+			}
+		}
+	}
+
+	&__img {
+		color: var(--red-color);
+		box-shadow: 40px 40px;
+
+		@include mq("phone-s", max) {
+			box-shadow: 25px 25px;
 		}
 	}
 }

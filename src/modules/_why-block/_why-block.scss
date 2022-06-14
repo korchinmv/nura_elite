@@ -1,0 +1,186 @@
+.why-block {
+	padding: 115px 0 105px;
+	position: relative;
+	overflow: hidden;
+
+	@include mq("tablet", max) {
+		padding: 80px 0 60px;
+	}
+
+	@include mq("phone", max) {
+		padding: 60px 0 40px;
+	}
+
+	&__title-shadow {
+		margin-top: -100px;
+
+		@include mq("tablet", max) {
+			margin-top: -65px;
+		}
+
+		@include mq("tablet-s", max) {
+			font-size: 110px;
+		}
+
+		@include mq("phone", max) {
+			margin-top: -35px;
+			font-size: 80px;
+		}
+
+		@include mq("phone-s", max) {
+			margin-top: -15px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 100px;
+
+		@include mq("tablet-s", max) {
+			margin-bottom: 40px;
+		}
+
+		@include mq("phone-s", max) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include mq("tablet", max) {
+			display: block;
+		}
+	}
+
+	&__img-box {
+		margin-right: 40px;
+		flex-shrink: 0;
+		position: relative;
+
+		@include mq("tablet", max) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 130px;
+			margin-right: 0;
+		}
+
+		@include mq("phone", max) {
+			margin-bottom: 110px;
+		}
+
+		@include mq("phone-s", max) {
+			margin-bottom: 90px;
+		}
+
+		&:before {
+			content: "";
+			display: block;
+			background-image: url(../images/about-block/decor-dots.png);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: absolute;
+			top: 55px;
+			left: -195px;
+			width: 450px;
+			height: 515px;
+			z-index: -1;
+
+			@include mq("tablet", max) {
+				top: -15px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+			@include mq("phone-s", max) {
+				width: 300px;
+				height: 300px;
+				right: -20px;
+				top: 30px;
+			}
+		}
+	}
+
+	&__img {
+		color: var(--red-color);
+		box-shadow: -40px 40px;
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin: 40px -35px 0 -5px;
+
+		@include mq("desktop", max) {
+			display: block;
+			margin-right: 0;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex: 0 1 340px;
+
+		@include mq("phone-s", max) {
+			display: block;
+			text-align: center;
+		}
+
+		&:not(:last-child) {
+			margin: 0 5px 30px 5px;
+
+			@include mq("desktop", max) {
+				margin: 0 0 30px 0;
+			}
+
+			@include mq("phone", max) {
+				margin-bottom: 20px;
+			}
+		}
+
+		&:last-child {
+			flex-basis: 425px;
+			margin-right: -75px;
+
+			@include mq("desktop", max) {
+				flex-basis: auto;
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__item-img {
+		align-self: flex-start;
+		object-fit: contain;
+		margin-right: 15px;
+
+		@include mq("phone-s", max) {
+			margin-right: 0;
+			margin: 0 auto 10px auto;
+		}
+	}
+
+	&__item-title {
+		margin-bottom: 10px;
+
+		@include mq("phone", max) {
+			line-height: 1;
+		}
+	}
+
+	&__descr {
+		font-size: 18px;
+
+		@include mq("tablet", max) {
+			font-size: 16px;
+		}
+
+		p:not(last-child) {
+			margin-bottom: 15px;
+		}
+	}
+}
