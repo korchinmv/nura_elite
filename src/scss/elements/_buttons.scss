@@ -6,4 +6,9 @@
 	display: inline-block;
 	font-size: 18px;
 	padding: 20px 30px;
+
+	&--red {
+		background-color: var(--red-color);
+		color: var(--white-color);
+	}
 }

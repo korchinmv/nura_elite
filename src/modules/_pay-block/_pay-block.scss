@@ -1,6 +1,31 @@
 .pay-block {
 	padding: 130px 0 60px;
 	position: relative;
+	overflow: hidden;
+
+	&:before {
+		content: "";
+		background-image: url(../images/bg-decor-symbol.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 430px;
+		width: 430px;
+		z-index: -1;
+
+		@include mq("desktop-s", max) {
+			height: 200px;
+			width: 200px;
+		}
+
+		@include mq("phone", max) {
+			height: 150px;
+			width: 150px;
+		}
+	}
 
 	@include mq("tablet", max) {
 		padding: 80px 0 50px;
