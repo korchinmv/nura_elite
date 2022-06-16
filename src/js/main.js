@@ -1,5 +1,6 @@
 import "./functions/burger";
 import "./functions/header-fixed";
+import "./functions/map";
 
 
 // import "./plugins/sliders";

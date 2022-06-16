@@ -89,3 +89,25 @@
 		}
 	}
 }
+
+.info {
+	&__link {
+		display: flex;
+		align-items: center;
+		transition: color 0.3s ease 0s;
+
+		svg {
+			width: 22px;
+			height: 22px;
+			fill: currentColor;
+			margin-right: 15px;
+			transition: fill 0.3s ease 0s;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--red-color);
+			}
+		}
+	}
+}
