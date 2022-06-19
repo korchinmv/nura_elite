@@ -6,6 +6,7 @@
 @import "./base/settings";
 @import "./base/animations";
 @import "./base/patterns";
+@import "./base/libs";
 
 //Элементы страницы
 @import "./elements/buttons";
@@ -18,9 +19,9 @@
 @import "../modules/_header/_header";
 @import "../modules/_hero/_hero";
 @import "../modules/_about-block/_about-block";
-
+@import "../modules/_slider-block/_slider-block";
 @import "../modules/_location-block/_location-block";
-
+@import "../modules/_advantages-block/_advantages-block";
 @import "../modules/_why-block/_why-block";
 @import "../modules/_tehnology-block/_tehnology-block";
 @import "../modules/_presentation-block/_presentation-block";

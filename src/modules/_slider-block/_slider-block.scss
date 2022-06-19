@@ -1,0 +1,156 @@
+.slider-block {
+	background-color: var(--light-color);
+	padding: 40px 0 75px;
+	z-index: 1;
+
+	@include mq("phone", max) {
+		padding: 20px 0 10px;
+	}
+
+	&__title {
+		margin-bottom: 30px;
+
+		@include mq("phone", max) {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.slider-wrapper {
+	position: relative;
+
+	@include mq("tablet", max) {
+		position: static;
+	}
+
+	&:before {
+		content: "";
+		display: block;
+		background-image: url(../images/about-block/decor-dots.png);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: absolute;
+		top: 75px;
+		left: -50px;
+		width: 535px;
+		height: 380px;
+		z-index: 1;
+
+		@include mq("tablet", max) {
+			display: none;
+		}
+	}
+}
+
+.slider {
+	max-width: 1180px;
+	width: 100%;
+	overflow: hidden;
+
+	@include mq("tablet", max) {
+		position: relative;
+	}
+
+	@include mq("phone", max) {
+		padding-bottom: 40px;
+	}
+
+	&__slide {
+		display: flex;
+
+		@include mq("tablet", max) {
+			flex-direction: column;
+		}
+	}
+
+	&__img {
+		object-fit: cover;
+
+		@include mq("tablet", max) {
+			order: 1;
+			width: 100%;
+		}
+	}
+
+	&__inner {
+		@include adaptiveValue("margin-left", 60, 10);
+
+		@include mq("tablet", max) {
+			margin: 0 0 5px 0;
+			order: -1;
+			text-align: center;
+		}
+	}
+
+	&__inner-img {
+		flex-grow: 0;
+
+		@include mq("tablet", max) {
+			display: none;
+		}
+	}
+
+	&__squares {
+		display: block;
+		font-size: 32px;
+		font-weight: 700;
+		margin-bottom: 10px;
+
+		@include mq("phone", max) {
+			font-size: 26px;
+		}
+	}
+
+	&__btn {
+		position: absolute;
+
+		@include mq("tablet", max) {
+			top: 55%;
+		}
+
+		@include mq("phone-s", max) {
+			display: none;
+		}
+
+		&--prev {
+			left: -100px;
+
+			@include mq("desktop", max) {
+				left: 10px;
+			}
+		}
+
+		&--next {
+			right: -100px;
+
+			@include mq("desktop", max) {
+				right: 10px;
+			}
+		}
+	}
+}
+
+.swiper-pagination {
+	display: none;
+
+	@include mq("phone", max) {
+		display: block;
+	}
+
+	.swiper-pagination-bullet {
+		width: 15px;
+		height: 15px;
+		background-color: var(--red-color);
+		opacity: 0.6;
+
+		@include mq("phone", max) {
+			width: 13px;
+			height: 13px;
+		}
+	}
+
+	.swiper-pagination-bullet-active {
+		opacity: 1;
+	}
+}

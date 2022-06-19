@@ -1,0 +1,42 @@
+@use "sass:math";
+
+//Percent
+@function percent($px, $from) {
+	$result: math.div($px, $from) * 100%;
+	@return $result;
+}
+//REM
+@function rem($px) {
+	$result: math.div($px, 16) + rem;
+	@return $result;
+}
+//EM
+@function em($px, $current: 16) {
+	$result: math.div($px, $current) + em;
+	@return $result;
+}
+//Адаптивное свойство
+
+//Currency
+@mixin currency($sym) {
+	&::after {
+		content: "#{$sym}";
+	}
+}
+
+// Grids
+@mixin gridCards($type: fit, $min: 280px, $max: 1fr, $gap: 30px) {
+	display: grid;
+	gap: $gap;
+	grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
+}
+
+@mixin image-set($pathToImage) {
+	background-image: url("#{$pathToImage}.jpg");
+	/* stylelint-disable-next-line declaration-block-no-duplicate-properties */
+	background-image: image-set(
+		/* stylelint-disable-next-line function-comma-newline-after */ "#{$pathToImage}.avif"type("image/avif"),
+		"#{$pathToImage}.webp"type("image/webp"),
+		"#{$pathToImage}.jpg"type("image/jpg")
+	);
+}
